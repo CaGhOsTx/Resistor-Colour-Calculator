@@ -331,7 +331,7 @@ public class Table { //it's a table like structure that I have created myself, i
              this.value = value;
          }
 
-         Cell(){}
+         Cell(){} // I don't remember why this is here but IntelliJ goes all red if it's gone, so I let it be :/
 
           void getInfo(){ //retrieves info about a certain cell
               System.out.println("value: " + value);
