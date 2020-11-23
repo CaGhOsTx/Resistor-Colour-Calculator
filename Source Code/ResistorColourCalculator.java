@@ -56,7 +56,7 @@ public class ResistorColourCalculator extends PApplet {
             calcSection.displayAll();
     }
 
-    public void mouseClicked() {  //this here is a big mess but is really all of the logic behind what happens when you click somewhere.
+    public void mouseClicked() {
         calcPressed = false;
         if (size4.mouseWithinBox()) { //this if chain just sets the colour of the Select size buttons and assigns,
             size4.boxColour = Colour.RED; // some booleans so the next part of the program gets initialised and displayed.
@@ -214,7 +214,7 @@ public class ResistorColourCalculator extends PApplet {
     }
 
     class BigBox extends Box { //this is a big box which contains smaller boxes, very useful to move a whole section of "boxes" with 2 x,y changes preserving structure
-        private Box shadow; //shadow box, I tried to make shadow :P
+        private Box shadow; //shadow box, I tried to make a shadow :P
         private final Box[] boxes; //since adding boxes to the BigBoxes would result in array size change, it is better to just reconstruct a new box every time.
 
         //I could've added a check in the mouseWithinBox method to see if the box is null, but
@@ -239,7 +239,7 @@ public class ResistorColourCalculator extends PApplet {
             shadow = new Box(x + xOffset, y + yOffset, w, h, 0, c);
         }
 
-        public void checkForMouseHoverAndDisplay() { //does what it says
+        public void checkForMouseHoverAndDisplay() {
             for (Box box : boxes) {
                 if (box.mouseWithinBox()) {
                     displayAllAndReplaceHover(box);
