@@ -86,7 +86,7 @@ public class Table { //it's a table like structure that I have created myself, i
         }
     }
     public void sort() {                //sorts the table (this was my own take on sorting, I don't know much about sorting algorithms
-         for(Column column : columns)   //I have watching it do the sorting by sleeping the thread after each array swap and it is not very efficient
+         for(Column column : columns)   //I have watched it do the sorting by sleeping the thread after each array swap and it is not very efficient
              sort(column.name);         //but it was my first sorting algorithm I wrote without any help so I am happy with it, better than the bogo :D
     }
     public void sort(String columnName) {
@@ -331,7 +331,7 @@ public class Table { //it's a table like structure that I have created myself, i
              this.value = value;
          }
 
-         Cell(){} // I don't remember why this is here but IntelliJ goes all red if it's gone, so I let it be :/
+         Cell(){}
 
           void getInfo(){ //retrieves info about a certain cell
               System.out.println("value: " + value);
